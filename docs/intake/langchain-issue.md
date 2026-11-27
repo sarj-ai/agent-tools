@@ -15,6 +15,6 @@ Submit only after the package and source/docs are public. Current intake: [Integ
 | Capability flags | Leave blank; chat/vector-store flags do not apply |
 | Published-package confirmation | Unchecked until the PyPI artifact is public |
 
-The toolkit implements `BaseToolkit` and creates four `StructuredTool` objects with native sync and async invocation. The source includes reproducible synthetic tests/examples; the release owner must add the final source/docs/PyPI links and bounded live-read evidence without keys or payloads. Do not claim hosted-guide eligibility, maintainer endorsement or production usage.
+The toolkit implements `BaseToolkit` and creates four `StructuredTool` objects with native sync and async invocation. The [source and tests](https://github.com/sarj-ai/agent-tools), [LangChain guide](https://github.com/sarj-ai/agent-tools/blob/main/docs/langchain.md), and [PyPI page](https://pypi.org/project/sarj-agent-tools/) are the submission links; verify the PyPI artifact before submitting. Public CI covers 72 tests, synthetic examples and installed-wheel consumers. All four native LangChain tools also passed bounded sync and async reads against an isolated synthetic workspace; no keys or response payloads are included. Do not claim hosted-guide eligibility, maintainer endorsement or production usage.
 
 Official instructions: [publish/listing guide](https://docs.langchain.com/oss/python/contributing/publish-langchain), [current issue schema](https://github.com/langchain-ai/docs/blob/main/.github/ISSUE_TEMPLATE/06-integration-submission.yml).
