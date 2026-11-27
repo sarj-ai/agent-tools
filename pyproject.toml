@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sarj-agent-tools"
+version = "0.1.0"
+description = "Four scoped Sarj AI call-read tools for LangChain and Haystack."
+readme = "README.md"
+requires-python = ">=3.11,<4"
+license = "MIT"
+authors = [{name = "Sarj AI", email = "engineering@sarj.ai"}]
+keywords = ["sarj", "langchain", "haystack", "tools", "voice", "calls"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+dependencies = ["httpx>=0.28.1,<1", "pydantic>=2.14.1,<3"]
+
+[project.optional-dependencies]
+langchain = ["langchain-core>=1.8.5,<2"]
+haystack = ["haystack-ai>=3.5.0,<4"]
+all = ["langchain-core>=1.8.5,<2", "haystack-ai>=3.5.0,<4"]
+
+[project.urls]
+Homepage = "https://sarj.ai"
+Documentation = "https://github.com/sarj-ai/agent-tools/tree/main/docs"
+Source = "https://github.com/sarj-ai/agent-tools"
+Issues = "https://github.com/sarj-ai/agent-tools/issues"
+Support = "https://sarj.ai/contact"
+
+[dependency-groups]
+dev = ["pytest>=9,<10", "pytest-asyncio>=1,<2", "ruff>=0.14,<1", "build>=1,<2", "twine>=7,<8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sarj_agent_tools"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/examples", "/scripts", "/docs", "/assets", "/README.md", "/LICENSE", "/Makefile", "/pyproject.toml", "/uv.lock"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
