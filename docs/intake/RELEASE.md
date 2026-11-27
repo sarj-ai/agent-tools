@@ -2,9 +2,15 @@
 
 Source: https://github.com/sarj-ai/agent-tools. The release workflow verifies the package before PyPI Trusted Publishing. LangChain and Haystack catalog publication remains subject to their maintainer reviews. Maintainer: Sarj AI, engineering@sarj.ai. License: MIT; existing Sarj brand logo is in `assets/logo.png`.
 
+## Published 0.1.0
+
+[PyPI](https://pypi.org/project/sarj-agent-tools/0.1.0/) and the [signed GitHub release](https://github.com/sarj-ai/agent-tools/releases/tag/v0.1.0) are public. The [release workflow](https://github.com/sarj-ai/agent-tools/actions/runs/45994749063) passed both verification and Trusted Publishing. Both PyPI distribution digests and publisher attestations were verified, as were fresh isolated installed-wheel consumers for the base package, LangChain and Haystack.
+
+[LangChain issue 8164](https://github.com/langchain-ai/docs/issues/8164) is submitted. [Haystack proposal 798](https://github.com/deepset-ai/haystack-integrations/issues/798) has been updated with the public package. Both remain subject to maintainer review.
+
 ## Concrete release artifact
 
-- Distribution: `sarj-agent-tools`, candidate version `0.1.0`; import `sarj_agent_tools`.
+- Distribution: `sarj-agent-tools`, released version `0.1.0`; import `sarj_agent_tools`.
 - Python: `>=3.11,<4`; base dependencies: HTTPX and Pydantic.
 - Optional extras: `langchain`, `haystack`, `all`; the base import loads neither framework. Tested native interfaces: LangChain Core 1.8.5 and Haystack 3.5.0.
 - Four fixed existing GET routes under `https://platform-api.sarj.ai/api/v1`: `/calls`, `/calls/{call_id}`, `/calls/{call_id}/transcript`, `/calls/{call_id}/analysis`.

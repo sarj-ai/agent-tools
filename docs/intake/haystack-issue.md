@@ -9,7 +9,7 @@ Current intake begins with the [new integration issue](https://github.com/deepse
 | Stage | Ready: integration exists and works, proposing to list it |
 | Integration or project name | Sarj AI |
 | Integration type | Tool Integration |
-| Published package or repo | [Public source](https://github.com/sarj-ai/agent-tools); [PyPI](https://pypi.org/project/sarj-agent-tools/) after release verification |
+| Published package or repo | [Public source](https://github.com/sarj-ai/agent-tools); [verified PyPI 0.1.0](https://pypi.org/project/sarj-agent-tools/0.1.0/) |
 | Need or proof of use | [Real Haystack Pipeline](https://github.com/sarj-ai/agent-tools/blob/main/examples/haystack_pipeline.py) consuming a native Sarj tool with synthetic transport data; 72 tests and installed consumers pass. All four tools also passed bounded sync/async live reads in an isolated synthetic workspace. No production customer-use claim is made. |
 | Short description | Four read tools let a Haystack agent or pipeline inspect an authorized Sarj organization's call history, details, transcripts and analysis. They use per-instance read-scoped credentials and expose no voice generation or call management. |
 
